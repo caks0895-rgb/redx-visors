@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RED X VISORS | Future Focused</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; overflow-x: hidden; }
+    .helmet-img { transition: transform 0.1s ease-out; transform-style: preserve-3d; }
+    .gradient-text { background: linear-gradient(135deg, #ff6b00, #ff3d00, #ffaa00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .btn-primary { background: linear-gradient(135deg, #ff6b00, #ff3d00); transition: all 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255, 100, 0, 0.4); }
+    .section-fade { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .section-fade.visible { opacity: 1; transform: translateY(0); }
+    #canvas-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.3; }
+  </style>
+</head>
+<body class="relative">
+  <div id="canvas-container"></div>
+  <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/5">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center font-bold text-sm">RX</div>
+      <span class="font-semibold tracking-wider">RED X VISORS</span>
+    </div>
+    <div class="hidden md:flex gap-8 text-sm text-white/70">
+      <a href="#features" class="hover:text-orange-400 transition">Features</a>
+      <a href="#specs" class="hover:text-orange-400 transition">Specs</a>
+    </div>
+    <button class="btn-primary px-5 py-2 rounded-full text-sm font-medium">Order Now</button>
+  </nav>
+  <section class="relative min-h-screen flex items-center justify-center pt-20 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="z-10 section-fade">
+        <p class="text-orange-400 text-sm tracking-[0.3em] uppercase mb-4">Future Focused</p>
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">See Beyond<br><span class="gradient-text">The Horizon</span></h1>
+        <p class="text-white/60 text-lg max-w-md mb-8 leading-relaxed">The RED X Visor system integrates advanced neural interfaces with adaptive optics. Experience reality augmented by precision engineering.</p>
+        <div class="flex gap-4">
+          <button class="btn-primary px-8 py-3 rounded-full font-medium">Configure Yours</button>
+          <button class="border border-white/20 px-8 py-3 rounded-full hover:bg-white/5 transition">Watch Demo</button>
+        </div>
+        <div class="mt-12 flex gap-8 text-sm">
+          <div><p class="text-2xl font-bold gradient-text">78</p><p class="text-white/40">Destroy</p></div>
+          <div><p class="text-2xl font-bold">12ms</p><p class="text-white/40">Latency</p></div>
+          <div><p class="text-2xl font-bold">∞</p><p class="text-white/40">Modes</p></div>
+        </div>
+      </div>
+      <div class="relative z-10 section-fade" id="helmet-wrapper">
+        <img src="https://i.ytimg.com/vi/IR1tzLU-r_4/hqdefault.jpg" id="helmet-img" alt="RED X Visor" class="helmet-img w-full max-w-lg mx-auto rounded-2xl" style="filter: drop-shadow(0 0 40px rgba(255,100,0,0.3));" />
+        <div class="absolute top-10 right-0 md:right-10 bg-black/60 backdrop-blur border border-white/10 rounded-2xl p-4 text-xs space-y-2">
+          <div class="flex justify-between gap-8"><span class="text-white/50">STATUS</span><span class="text-green-400">ONLINE</span></div>
+          <div class="flex justify-between gap-8"><span class="text-white/50">POWER</span><span>98%</span></div>
+          <div class="flex justify-between gap-8"><span class="text-white/50">MODE</span><span class="text-orange-400">COMBAT</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="features" class="py-32 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-20 section-fade">
+        <p class="text-orange-400 text-sm tracking-[0.3em] uppercase mb-4">Capabilities</p>
+        <h2 class="text-4xl md:text-5xl font-bold">Engineered for<br><span class="gradient-text">Dominance</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-8 section-fade hover:border-orange-500/30 transition">
+          <div class="w-12 h-12 rounded-2xl bg-orange-500/20 flex items-center justify-center mb-6 text-2xl">⚡</div>
+          <h3 class="text-xl font-semibold mb-3">Neural Sync</h3>
+          <p class="text-white/50 leading-relaxed">Direct neural link with sub-12ms latency. Your thoughts become commands.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-8 section-fade hover:border-orange-500/30 transition">
+          <div class="w-12 h-12 rounded-2xl bg-orange-500/20 flex items-center justify-center mb-6 text-2xl">👁</div>
+          <h3 class="text-xl font-semibold mb-3">Adaptive Optics</h3>
+          <p class="text-white/50 leading-relaxed">Real-time environment mapping with thermal, night, and tactical overlays.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-8 section-fade hover:border-orange-500/30 transition">
+          <div class="w-12 h-12 rounded-2xl bg-orange-500/20 flex items-center justify-center mb-6 text-2xl">🛡</div>
+          <h3 class="text-xl font-semibold mb-3">Impact Shield</h3>
+          <p class="text-white/50 leading-relaxed">Military-grade composite shell rated for extreme conditions and ballistic protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-32 px-6 relative z-10">
+    <div class="max-w-4xl mx-auto text-center section-fade">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6">Ready to <span class="gradient-text">Ascend</span>?</h2>
+      <p class="text-white/50 text-lg mb-10 max-w-xl mx-auto">Limited production run. Pre-order now and join the next evolution of human-machine interface.</p>
+      <button class="btn-primary px-12 py-4 rounded-full text-lg font-medium">Pre-Order — $2,499</button>
+    </div>
+  </section>
+  <footer class="border-t border-white/5 py-12 px-6 text-center text-white/30 text-sm relative z-10">
+    <p>© 2026 RED X VISORS. Designed with Grok · Inspired by Fable 5 style 3D web designs</p>
+  </footer>
+  <script>
+    const helmet = document.getElementById('helmet-img');
+    document.addEventListener('mousemove', (e) => {
+      if (!helmet) return;
+      const x = (e.clientX / window.innerWidth - 0.5) * 15;
+      const y = (e.clientY / window.innerHeight - 0.5) * 15;
+      helmet.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+    const container = document.getElementById('canvas-container');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    container.appendChild(renderer.domElement);
+    const particles = new THREE.BufferGeometry();
+    const posArray = new Float32Array(500 * 3);
+    for (let i = 0; i < 1500; i++) posArray[i] = (Math.random() - 0.5) * 20;
+    particles.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    const material = new THREE.PointsMaterial({ size: 0.02, color: 0xff6400, transparent: true, opacity: 0.6 });
+    const particleMesh = new THREE.Points(particles, material);
+    scene.add(particleMesh);
+    camera.position.z = 5;
+    function animate() { requestAnimationFrame(animate); particleMesh.rotation.y += 0.001; renderer.render(scene, camera); }
+    animate();
+    window.addEventListener('resize', () => { camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight); });
+  </script>
+</body>
+</html>
